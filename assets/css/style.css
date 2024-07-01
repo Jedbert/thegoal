@@ -1,0 +1,148 @@
+:root {
+    --dark-color: #484848;
+    --yellow-color: #FFC656;
+    --brown-color: #FF7F56;
+    --wine-color: #FF5656;
+    --blue-color: #5671FF;
+    --red-color: #ED1C24;
+    --light-color: #F7F7F7;
+    --background-color: #0D1117
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-color);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 1em 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* Layout */
+header {
+    background-color: var(--background-color);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    background-color: white;
+    padding: 2em;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    border-radius: 8px;
+}
+
+.intro,
+.contact-info,
+.current-time,
+.links {
+    margin-bottom: 2em;
+}
+
+.contact-info .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info .info p {
+    margin-bottom: 0.5em;
+}
+
+.contact-info .profile-picture {
+    margin-top: 1em;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Links */
+.links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links ul li {
+    margin: 0.5em 0;
+}
+
+.links ul li a {
+    color: var(--wine-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: var(--dark-color);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Subtle Animations */
+h1,
+h2,
+p,
+a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover,
+h2:hover {
+    transform: scale(1.05);
+}
+
+a:hover {
+    transform: scale(1.05);
+    color: var(--brown-color);
+}
